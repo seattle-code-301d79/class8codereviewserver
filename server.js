@@ -9,7 +9,7 @@ const axios = require('axios');
 const app = express();
 app.use(cors());
 // use implies middleware
-const PORT = 3001;
+const PORT = process.env.PORT;
 
 app.get('/test', ((req, res) => res.send('test worked')));
 app.get('/weather', handleGetWeather);
